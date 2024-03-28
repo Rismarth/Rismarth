@@ -1,41 +1,34 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test de GitHub</title>
+    <title>Page Interactive</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            text-align: center;
-        }
-
         .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        p {
-            color: #666;
+            text-align: center;
+            margin-top: 100px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Test de GitHub !</h1>
-        <p>Il fallait tester, alors nous avons testé, parce que oui, je ne suis pas seul dans ma tête</p>
-        <p>ça a l'air génial.</p>
+        <h1>Bienvenue sur ma page interactive !</h1>
+        <button id="btn">Cliquez ici</button>
+        <p id="message"></p>
     </div>
+
+    <script>
+        // Sélectionnez le bouton
+        const btn = document.getElementById('btn');
+
+        // Ajoutez un gestionnaire d'événement de clic au bouton
+        btn.addEventListener('click', () => {
+            // Sélectionnez l'élément de message
+            const message = document.getElementById('message');
+            // Changez le texte du message
+            message.textContent = 'Félicitations ! Vous avez cliqué sur le bouton.';
+        });
+    </script>
 </body>
 </html>
